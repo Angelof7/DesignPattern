@@ -9,11 +9,11 @@ public class ConcreteObserver implements Observer {
      */
     private String observerState;
 
-    public void update(String state) {
+    public void update(Subject subject) {
         /**
          * 更新观察者的状态，使其与目标状态保存一致
          */
-        observerState = state;
+        observerState = ((ConcreteSubject)subject).getState();
         System.out.println("观察者状态为:" + observerState);
     }
 }

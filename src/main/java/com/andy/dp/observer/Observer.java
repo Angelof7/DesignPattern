@@ -8,7 +8,7 @@ public interface Observer {
     /**
      * 更新接口
      *
-     * @param state: 更新的状态
+     * @param subject: 传入主题对象
      */
-    void update(String state);
+    void update(Subject subject);
 }

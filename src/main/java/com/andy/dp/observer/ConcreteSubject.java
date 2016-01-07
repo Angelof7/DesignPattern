@@ -24,6 +24,6 @@ public class ConcreteSubject extends Subject {
 
         System.out.println("主题状态为: " + state);
         //状态发生改变，通知各个观察者
-        this.notifyObservers(state);
+        this.notifyObservers();
     }
 }

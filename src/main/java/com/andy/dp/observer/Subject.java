@@ -7,6 +7,10 @@ import java.util.List;
  * 抽象主题角色
  * Created by andy on 16/1/7.
  */
+
+/**
+ * 观察者模式有两种模式：推模型和拉模型，这里采用拉模型
+ */
 public abstract class Subject {
     /**
      * 用来保存注册的观察者对象
@@ -35,12 +39,10 @@ public abstract class Subject {
 
     /**
      * 通知所有注册的观察者对象
-     *
-     * @param newState: 新状态消息
      */
-    public void notifyObservers(String newState) {
+    public void notifyObservers() {
         for (Observer observer : list) {
-            observer.update(newState);
+            observer.update(this);
         }
     }
 }
